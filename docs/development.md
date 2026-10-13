@@ -40,3 +40,12 @@ npm run build       # Vite production build into dist/web
 The unit tests do not start a browser: the runner and API tests use a fake browser that writes
 synthetic PNGs, and the comparison tests build images in memory. CI runs the same four commands on
 Node 20, 22 and 24.
+
+## README images
+
+`docs/screenshot.png` and `docs/viewer.png` are a demo run against public websites (python.org,
+php.net, rust-lang.org, w3.org, debian.org, wikipedia.org) with desktop and mobile viewports. The
+"Changed" result is induced on purpose: the php.net baselines were captured first, then the check
+ran with `hide` selectors on the page's logo and tagline and a per-site `minSimilarity` of 0.995.
+wikipedia.org was added after the baselines were taken, so it shows "No baseline". The state was
+kept in a scratch folder outside the repository.

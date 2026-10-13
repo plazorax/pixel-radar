@@ -1,32 +1,48 @@
 @import 'tailwindcss';
 
+/*
+ * Neutral surfaces and type; colour is reserved for status (ok, changed, warn).
+ */
 @theme {
-  --color-paper: #f3f5f7;
+  --color-canvas: #f6f7f9;
   --color-surface: #ffffff;
-  --color-ink: #18212b;
-  --color-muted: #5b6675;
-  --color-line: #dce1e7;
-  --color-accent: #c41e64;
-  --color-accent-soft: #fbe7ef;
-  --color-ok: #1f7a4d;
-  --color-ok-soft: #e3f3ea;
-  --color-warn: #a4520a;
-  --color-warn-soft: #fbeedd;
-  --color-info: #3e5c76;
-  --color-info-soft: #e6edf3;
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --color-subtle: #f8f9fa;
+  --color-ink: #1f2328;
+  --color-muted: #59636e;
+  --color-faint: #8b939d;
+  --color-line: #e3e6ea;
+  --color-line-strong: #cfd4da;
+
+  --color-ok: #2f6b4b;
+  --color-ok-soft: #f0f6f2;
+  --color-ok-line: #cfe1d5;
+  --color-changed: #a63a32;
+  --color-changed-soft: #fbf1f0;
+  --color-changed-line: #eccdc9;
+  --color-warn: #87580e;
+  --color-warn-soft: #fbf5e6;
+  --color-warn-line: #e9d9b1;
+  --color-neutral: #59636e;
+  --color-neutral-soft: #f3f4f6;
+  --color-neutral-line: #dde1e6;
+
+  --font-sans: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
 @layer base {
   body {
-    background: var(--color-paper);
+    background: var(--color-canvas);
     color: var(--color-ink);
     font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'cv11', 'ss01';
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-ink);
     outline-offset: 2px;
   }
 

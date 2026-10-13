@@ -49,6 +49,9 @@ async function capturePage(browser: Browser, request: CaptureRequest): Promise<v
     deviceScaleFactor: 1,
     reducedMotion: 'reduce',
     colorScheme: 'light',
+    // A strict Content-Security-Policy (style-src without 'unsafe-inline') would otherwise block the
+    // stylesheet that applies the `hide` selectors, and those elements would stay visible.
+    bypassCSP: true,
   });
   try {
     const page = await context.newPage();

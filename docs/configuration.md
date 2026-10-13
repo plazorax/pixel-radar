@@ -1,6 +1,6 @@
 # Configuration
 
-pixel-radar reads one JSON file. By default that is `sites.json` in the current directory; use
+Pixel Radar reads one JSON file. By default that is `sites.json` in the current directory; use
 `--config <file>` or `PIXEL_RADAR_CONFIG` to point somewhere else. Start from the example:
 
 ```sh
@@ -76,7 +76,7 @@ A site is either a URL string or an object:
 | `name` | Label in the dashboard. Defaults to host and path. |
 | `viewports` | Subset of the global viewport names. Defaults to all of them. |
 | `minSimilarity` | Overrides the global value for this site. |
-| `hide` | CSS selectors set to `visibility: hidden` while the screenshot is taken (cookie banners, chat widgets). |
+| `hide` | CSS selectors set to `visibility: hidden` while the screenshot is taken (cookie banners, chat widgets). The element keeps its space in the layout. |
 | `mask` | CSS selectors covered with a solid box (rotating banners, dates, prices). The layout stays the same. |
 
 The file is validated on load. Unknown keys (usually typos), non-http URLs, out-of-range numbers,

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { api } from './api.ts';
 import Dashboard from './components/Dashboard.tsx';
 import LoginForm from './components/LoginForm.tsx';
-import { APP_NAME } from '../../src/shared/app.ts';
+import { DISPLAY_NAME } from '../../src/shared/app.ts';
 import type { SessionInfo } from '../../src/shared/types.ts';
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
   if (error) {
     return (
       <main className="mx-auto max-w-xl px-4 py-16">
-        <p className="text-warn">Could not reach the {APP_NAME} server: {error}</p>
+        <p className="text-warn">Could not reach the {DISPLAY_NAME} server: {error}</p>
       </main>
     );
   }

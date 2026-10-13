@@ -3,6 +3,9 @@
 
 export const APP_NAME = 'pixel-radar';
 
+/** Human-readable name shown in the dashboard. */
+export const DISPLAY_NAME = 'Pixel Radar';
+
 /** Prefix for server and CLI log lines. */
 export const LOG_PREFIX = `[${APP_NAME}]`;
 

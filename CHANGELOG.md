@@ -4,6 +4,21 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Redesigned dashboard, logo: neutral interface with colour reserved for status, a status summary
+  bar, a "Needs attention" table, per-site thresholds, monospace URLs, scores and timestamps, and
+  a reworked image viewer and login form.
+- New pixel-grid radar logo (`docs/logo.svg`) with SVG and 32 px PNG favicons; the dashboard shows
+  the name as "Pixel Radar".
+
+### Fixed
+
+- `hide` selectors had no effect on sites with a strict Content-Security-Policy (`style-src`
+  without `'unsafe-inline'`); captures now bypass the page's CSP.
+
 ## [0.1.0] - 2026-10-13
 
 ### Added

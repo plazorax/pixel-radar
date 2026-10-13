@@ -79,3 +79,15 @@ export function formatSimilarity(similarity: number | null): string {
   if (similarity >= 1) return '100%';
   return `${(Math.floor(similarity * 10_000) / 100).toFixed(2)}%`;
 }
+
+/** Formats a 0..1 `minSimilarity` threshold as a percentage without trailing zeros, e.g. 99.5%. */
+export function formatThreshold(minSimilarity: number): string {
+  return `${Number((minSimilarity * 100).toFixed(2))}%`;
+}
+
+/** Number of items per status; every status is present, with 0 when unused. */
+export function countByStatus(statuses: readonly Status[]): Record<Status, number> {
+  const counts = Object.fromEntries(STATUSES.map((status) => [status, 0])) as Record<Status, number>;
+  for (const status of statuses) counts[status] += 1;
+  return counts;
+}

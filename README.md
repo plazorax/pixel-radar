@@ -1,11 +1,13 @@
-# pixel-radar
+<img src="docs/logo.svg" width="48" height="48" alt="Pixel Radar logo">
+
+# Pixel Radar
 
 ![CI](https://github.com/plazorax/pixel-radar/actions/workflows/ci.yml/badge.svg)
 
 A self-hosted visual monitor for any website: it screenshots your pages with Playwright, compares
 them with approved baselines pixel by pixel and flags the ones that changed.
 
-![pixel-radar dashboard with changed, OK and no-baseline results](docs/screenshot.png)
+![Pixel Radar dashboard: status summary, a "Needs attention" table and baseline, current and diff thumbnails per viewport](docs/screenshot.png)
 
 ## Why
 
@@ -57,7 +59,8 @@ Set `PIXEL_RADAR_PASSWORD` to require a login. Options, cron and CI setups are i
 - Check or rebase one site, a group or everything; accept a reviewed capture as the new baseline.
 - `hide` and `mask` selectors, per-site thresholds and retries to reduce false alarms.
 - Stale-check warnings, optional cron schedule and password login with signed cookies.
-- React, TypeScript and Tailwind CSS dashboard served by the same Node.js process.
+- Dashboard with status counts, a "Needs attention" table and a baseline/current/diff viewer;
+  React, TypeScript and Tailwind CSS, served by the same Node.js process.
 
 ## Status
 
