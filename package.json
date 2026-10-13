@@ -1,0 +1,68 @@
+{
+  "name": "pixel-radar",
+  "version": "0.1.0",
+  "description": "Self-hosted visual monitoring: screenshot many websites with Playwright, compare them to baselines with a pixel diff and flag visual changes.",
+  "license": "MIT",
+  "author": "Oleksii Shaposhnikov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plazorax/pixel-radar.git"
+  },
+  "keywords": [
+    "visual-regression",
+    "screenshot",
+    "playwright",
+    "pixelmatch",
+    "monitoring"
+  ],
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/cli.ts serve --dev",
+    "start": "tsx src/cli.ts serve",
+    "check": "tsx src/cli.ts check",
+    "rebase": "tsx src/cli.ts rebase",
+    "accept": "tsx src/cli.ts accept",
+    "status": "tsx src/cli.ts status",
+    "browsers": "playwright install chromium",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json && tsc -p web/tsconfig.json",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "node-cron": "^4.6.0",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.64.0",
+    "pngjs": "^7.0.0",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.20.5",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "lucide-react": "^1.56.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.71.2",
+    "vite": "^8.3.4",
+    "vitest": "^4.1.11"
+  }
+}

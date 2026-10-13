@@ -1,0 +1,27 @@
+{
+  "storageDir": "./data",
+  "minSimilarity": 0.98,
+  "pixelThreshold": 0.1,
+  "viewports": {
+    "desktop": { "width": 1440, "height": 900 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "capture": {
+    "fullPage": false,
+    "timeoutMs": 30000,
+    "waitAfterLoadMs": 1000
+  },
+  "retries": 1,
+  "retryDelayMs": 5000,
+  "concurrency": 2,
+  "staleAfterHours": 72,
+  "groups": {
+    "Examples": [
+      "https://example.com/",
+      { "url": "https://example.org/", "name": "example.org (desktop only)", "viewports": ["desktop"] }
+    ],
+    "Reserved domains": [
+      { "url": "https://example.net/", "minSimilarity": 0.95, "hide": [".cookie-banner"] }
+    ]
+  }
+}
