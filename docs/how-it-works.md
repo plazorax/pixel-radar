@@ -3,7 +3,9 @@
 ## Capture
 
 Each site and viewport is opened in a fresh Chromium browser context (Playwright) with
-`deviceScaleFactor: 1`, `reducedMotion: "reduce"` and a light colour scheme. pixel-radar then:
+`deviceScaleFactor: 1`, `reducedMotion: "reduce"` and a light colour scheme. The page's
+Content-Security-Policy is bypassed so the stylesheet for `hide` selectors also applies on sites
+with a strict `style-src`. Pixel Radar then:
 
 1. loads the page and waits for the `load` event; an HTTP status of 400 or higher, a timeout or a
    network error makes the result **Unavailable**;
@@ -30,6 +32,8 @@ The baseline and current PNGs are compared with [pixelmatch](https://github.com/
 - The diff image shows a faded baseline with changed pixels in magenta.
 
 The dashboard rounds the score down, so a page with a few changed pixels shows 99.99%, not 100%.
+
+![Pixel Radar image viewer showing the diff of a changed page](viewer.png)
 
 ## Statuses
 

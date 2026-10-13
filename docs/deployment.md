@@ -1,6 +1,6 @@
 # Deployment
 
-pixel-radar is a single Node.js process: it serves the built dashboard, the API and the
+Pixel Radar is a single Node.js process: it serves the built dashboard, the API and the
 screenshots, and can run scheduled checks.
 
 ## Requirements

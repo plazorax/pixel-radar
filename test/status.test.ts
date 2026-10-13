@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   classifySimilarity,
+  countByStatus,
   formatSimilarity,
+  formatThreshold,
   isFailure,
   isStale,
   isStatus,
@@ -64,6 +66,23 @@ describe('formatSimilarity', () => {
     expect(formatSimilarity(0.99999)).toBe('99.99%');
     expect(formatSimilarity(0.5)).toBe('50.00%');
     expect(formatSimilarity(null)).toBe('–');
+  });
+});
+
+describe('formatThreshold', () => {
+  it('shows the configured minimum without float noise or trailing zeros', () => {
+    expect(formatThreshold(0.98)).toBe('98%');
+    expect(formatThreshold(0.995)).toBe('99.5%');
+    expect(formatThreshold(0.29)).toBe('29%');
+    expect(formatThreshold(1)).toBe('100%');
+  });
+});
+
+describe('countByStatus', () => {
+  it('counts every status and reports unused ones as 0', () => {
+    const counts = countByStatus(['ok', 'ok', 'changed', 'no_baseline']);
+    expect(counts).toMatchObject({ ok: 2, changed: 1, no_baseline: 1, unavailable: 0, error: 0 });
+    expect(Object.keys(counts).sort()).toEqual([...STATUSES].sort());
   });
 });
 
