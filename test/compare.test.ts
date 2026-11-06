@@ -22,13 +22,13 @@ describe('compareImages', () => {
     expect(result.similarity).toBeCloseTo(0.98, 10);
   });
 
-  it('marks changed pixels with the diff colour', () => {
+  it('marks changed pixels with the diff color', () => {
     const result = compareImages(solid(4, 4), setPixel(solid(4, 4), 1, 1, [0, 0, 0]));
     const index = (1 * 4 + 1) * 4;
     expect(Array.from(result.diff.data.subarray(index, index + 3))).toEqual(DIFF_COLOR);
   });
 
-  it('ignores colour differences below the pixel threshold', () => {
+  it('ignores color differences below the pixel threshold', () => {
     const current = solid(10, 10, [252, 252, 252]);
     expect(compareImages(solid(10, 10), current, { pixelThreshold: 0.1 }).diffPixels).toBe(0);
     expect(compareImages(solid(10, 10), current, { pixelThreshold: 0 }).diffPixels).toBe(100);

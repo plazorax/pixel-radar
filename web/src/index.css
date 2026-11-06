@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /*
- * Neutral surfaces and type; colour is reserved for status (ok, changed, warn).
+ * Neutral surfaces and type; color is reserved for status (ok, changed, warn).
  */
 @theme {
   --color-canvas: #f6f7f9;

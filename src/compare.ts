@@ -11,7 +11,7 @@ export interface RawImage {
 }
 
 export interface CompareOptions {
-  /** pixelmatch colour threshold (0..1). Higher ignores more subtle colour differences. */
+  /** pixelmatch color threshold (0..1). Higher ignores more subtle color differences. */
   pixelThreshold?: number;
 }
 
@@ -26,7 +26,7 @@ export interface CompareResult {
   diff: RawImage;
 }
 
-/** Colour used to mark changed pixels in the diff image (matches the dashboard accent). */
+/** Color used to mark changed pixels in the diff image (matches the dashboard accent). */
 export const DIFF_COLOR: [number, number, number] = [196, 30, 100];
 /** Pixels pixelmatch classifies as anti-aliasing: shown faintly, not counted as changes. */
 export const AA_COLOR: [number, number, number] = [240, 190, 210];

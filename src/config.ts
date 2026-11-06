@@ -110,7 +110,7 @@ export class ConfigError extends Error {
 }
 
 /**
- * Validates a raw config object and normalises it: fills defaults, turns plain URL strings into
+ * Validates a raw config object and normalizes it: fills defaults, turns plain URL strings into
  * site objects, assigns ids and resolves `storageDir` against `baseDir` (the config file's folder).
  */
 export function parseConfig(raw: unknown, baseDir: string, configPath: string | null = null): ResolvedConfig {

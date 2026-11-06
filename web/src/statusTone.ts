@@ -2,7 +2,7 @@ import type { Status } from '../../src/shared/status.ts';
 
 export type Tone = 'ok' | 'changed' | 'warn' | 'neutral';
 
-/** Colour family per status. Only OK, Changed and failures get a colour; the rest stay grey. */
+/** Color family per status. Only OK, Changed and failures get a color; the rest stay gray. */
 export const STATUS_TONE: Record<Status, Tone> = {
   ok: 'ok',
   changed: 'changed',

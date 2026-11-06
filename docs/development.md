@@ -15,7 +15,7 @@ and the dashboard share one origin and no proxy or CORS setup is needed.
 ```
 src/
   cli.ts          command-line entry point (check, rebase, accept, status, serve)
-  config.ts       config schema (zod), defaults and normalisation
+  config.ts       config schema (zod), defaults and normalization
   capture.ts      Playwright screenshots
   compare.ts      pixelmatch comparison and diff images
   runner.ts       check / rebase / accept over many sites, retries, concurrency

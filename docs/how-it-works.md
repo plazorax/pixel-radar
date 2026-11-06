@@ -3,7 +3,7 @@
 ## Capture
 
 Each site and viewport is opened in a fresh Chromium browser context (Playwright) with
-`deviceScaleFactor: 1`, `reducedMotion: "reduce"` and a light colour scheme. The page's
+`deviceScaleFactor: 1`, `reducedMotion: "reduce"` and a light color scheme. The page's
 Content-Security-Policy is bypassed so the stylesheet for `hide` selectors also applies on sites
 with a strict `style-src`. Pixel Radar then:
 
@@ -23,7 +23,7 @@ baseline with a broken image. One browser is shared by all sites in a run.
 
 The baseline and current PNGs are compared with [pixelmatch](https://github.com/mapbox/pixelmatch):
 
-- `pixelThreshold` decides when two pixels count as different (pixelmatch measures colour
+- `pixelThreshold` decides when two pixels count as different (pixelmatch measures color
   distance; 0.1 is its default). Pixels pixelmatch classifies as anti-aliasing are not counted.
 - If the images differ in size (for example a full-page capture got taller), the overlapping area
   is compared and every pixel outside it counts as changed.
@@ -60,7 +60,7 @@ one-off glitches such as a slow ad or a brief outage.
 ## Limitations
 
 - Pixel comparison is sensitive to anything dynamic: carousels, ads, embeds, dates, A/B tests and
-  personalised content. Use `hide`, `mask` and a lower `minSimilarity` for such pages.
+  personalized content. Use `hide`, `mask` and a lower `minSimilarity` for such pages.
 - Only Chromium is used; the first screen (or the full page) is captured, not individual elements.
 - State lives in one JSON file. It is fine for dozens or a few hundred screenshots, not for
   thousands, and there is no history of past results.

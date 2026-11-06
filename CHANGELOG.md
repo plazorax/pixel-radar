@@ -8,7 +8,7 @@ All notable changes to this project are documented here. The format follows
 
 ### Changed
 
-- Redesigned dashboard, logo: neutral interface with colour reserved for status, a status summary
+- Redesigned dashboard, logo: neutral interface with color reserved for status, a status summary
   bar, a "Needs attention" table, per-site thresholds, monospace URLs, scores and timestamps, and
   a reworked image viewer and login form.
 - New pixel-grid radar logo (`docs/logo.svg`) with SVG and 32 px PNG favicons; the dashboard shows

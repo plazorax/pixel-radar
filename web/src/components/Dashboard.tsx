@@ -338,7 +338,7 @@ function SummaryCell({
   );
 }
 
-/** Counts that are coloured in the summary bar; OK and neutral counts stay ink. */
+/** Counts that are colored in the summary bar; OK and neutral counts stay ink. */
 function isAlert(status: Status): boolean {
   const tone = STATUS_TONE[status];
   return tone === 'changed' || tone === 'warn';

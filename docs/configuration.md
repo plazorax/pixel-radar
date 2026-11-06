@@ -51,7 +51,7 @@ first run. Those pages ask not to be relied on for monitoring, so replace them w
 | --- | --- | --- |
 | `storageDir` | `./data` | Where screenshots and `state.json` live. Relative paths are resolved against the config file's folder. |
 | `minSimilarity` | `0.98` | A check passes when similarity is at or above this value (0 to 1). |
-| `pixelThreshold` | `0.1` | pixelmatch colour threshold per pixel (0 to 1). Higher ignores subtler colour differences. |
+| `pixelThreshold` | `0.1` | pixelmatch color threshold per pixel (0 to 1). Higher ignores subtler color differences. |
 | `viewports` | `{ "desktop": 1440×900 }` | Named viewport sizes. Names use lowercase letters, digits and dashes. |
 | `capture.fullPage` | `false` | Capture the whole scrollable page instead of the first screen. |
 | `capture.timeoutMs` | `30000` | Page load timeout. |
